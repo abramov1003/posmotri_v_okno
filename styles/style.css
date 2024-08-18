@@ -36,3 +36,300 @@ ul,
 ol {
   list-style: none;
 }
+
+.visually-hidden {
+  position: absolute;  
+  width: 1px;  
+  height: 1px;
+  margin: -1px;  
+  padding: 0;  
+  border: 0;  
+  clip: rect(0 0 0 0);  
+  overflow: hidden;  
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  block-size: 100%;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  inline-size: 1140px;
+  gap: 35px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__list {
+  position: relative;
+  inline-size: 399px;
+  block-size: 298px;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.content__details {
+  margin-top: 35px;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.result__video-container {
+  position: relative;
+  inline-size: 711px;
+  block-size: 386px;
+}
+
+.result__video {
+  width: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.content__list {
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+  inline-size: 395px;
+  block-size: 107px;
+}
+
+.content__video-card:active {
+  background-color: #545050;
+
+}
+
+.content__video-card:hover {
+  text-decoration: underline;
+}
+
+.content__video-card:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.content__video-card:focus {
+  outline: none;
+}
+
+
+.content__video-card-thumbnail {
+  min-inline-size: 199px;
+  max-height: 107px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.content__video-card-description-container {
+  max-width: 180px;
+}
+
+.search-form__fieldset-title {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.title {
+  font-family: "Oswald", sans-serif;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 69.5px;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__card-link {
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin: 2px;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__video-card-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  padding: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.content__video-card-description {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px;
+  inline-size: 200px;
+}
+
+/* тут будут остальные импуты и формы*/
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+/* Лейбел "город" */
+.search-form__label {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+/* форма поиска */
+.search-form__textfield {
+  appearance: none;
+  min-inline-size: 225px;
+  background-color: transparent;
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-weight: 400;
+  border-right: none;
+  border-left: none; 
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.search-form__textfield::placeholder {
+  font-size: 18px;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+  border: 1px solid #fff;
+}
+
+/* Чек боксы */
+.search-form__checkbox-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-inline-size: 212px;
+  cursor: pointer;
+}
+
+.search-form__checkbox-list:hover {
+  text-decoration: underline;
+}
+
+.search-form__checkbox-list:focus {
+  outline: none;
+}
+
+.search-form__checkbox-list:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__pseudo-checkbox {
+  display: flex;
+  inline-size: 19px;
+  block-size: 19px;
+  border: 1px solid #fff;
+  margin-right: 5px;
+  padding: 1px;
+}
+
+input[type='checkbox']:checked + .search-form__pseudo-checkbox {
+  background-color: #fff;
+  inline-size: 19px;
+  block-size: 19px;
+  border: 1px solid #1b1919;
+  outline: 1px solid #fff;
+  cursor: pointer;
+}
+
+
+
+/* Конпка общая */
+
+.button {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  inline-size: 100%;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+} 
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+  text-decoration: none;
+}
+
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+/* Кнопка найти в форме */
+
+.search-form__submit-button {
+  inline-size: 194px;
+  align-self: flex-end;
+  padding: 7px 0;
+  block-size: 35px;
+}
+
+/* Кнопка показать еще */
+
+.more-button {
+  block-size: 35px;
+}
+
+.more-button-template {
+  margin: 0;
+}
