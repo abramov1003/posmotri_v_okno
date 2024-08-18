@@ -9,8 +9,12 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   block-size: 100%;
+  inline-size: 1200px;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -48,14 +52,6 @@ ol {
   overflow: hidden;  
 }
 
-.page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  block-size: 100%;
-}
-
 .content {
   display: flex;
   justify-content: center;
@@ -64,17 +60,15 @@ ol {
   gap: 35px;
 }
 
-.search-form {
-  display: flex;
-  justify-content: space-between;
-}
-
 .content__list {
   position: relative;
   inline-size: 399px;
   block-size: 298px;
-  overflow: auto;
-  scrollbar-width: none;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .content__details {
@@ -93,12 +87,6 @@ ol {
   width: 100%;
   block-size: 100%;
   object-fit: cover;
-}
-
-.content__list {
-  font-family: Oswald;
-  font-size: 30px;
-  font-weight: 700;
 }
 
 .content__list-item:not(:last-child) {
@@ -130,14 +118,12 @@ ol {
   outline: none;
 }
 
-
 .content__video-card-thumbnail {
-  min-inline-size: 199px;
-  max-height: 107px;
+  min-inline-size: 194px;
+  max-height: 103px;
   object-fit: cover;
   object-position: center;
 }
-
 
 .content__video-card-description-container {
   max-width: 180px;
@@ -191,7 +177,7 @@ ol {
 }
 
 .content__video-card-description {
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
@@ -217,12 +203,18 @@ ol {
   width: fit-content;
 }
 
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
 /* форма поиска */
 .search-form__textfield {
+  color: #FFFFFFB2;
   appearance: none;
   min-inline-size: 225px;
   background-color: transparent;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
   border-right: none;
@@ -249,7 +241,7 @@ ol {
   cursor: pointer;
 }
 
-.search-form__checkbox-list:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
@@ -269,6 +261,7 @@ ol {
   border: 1px solid #fff;
   margin-right: 5px;
   padding: 1px;
+
 }
 
 input[type='checkbox']:checked + .search-form__pseudo-checkbox {
@@ -280,7 +273,9 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
   cursor: pointer;
 }
 
-
+.search-form__label-text {
+  cursor: pointer;
+}
 
 /* Конпка общая */
 
@@ -309,10 +304,9 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
   text-decoration: none;
 }
 
-
 .button:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 1px;
+  outline-offset: 2px;
 }
 
 /* Кнопка найти в форме */
